@@ -2,7 +2,7 @@
 Author: caiyunjin caiyunjin@vip.qq.com
 Date: 2023-04-24 16:37:30
 LastEditors: caiyunjin caiyunjin@vip.qq.com
-LastEditTime: 2023-04-24 17:54:47
+LastEditTime: 2023-04-24 20:19:05
 FilePath: \python\基本教程\26.mysql.py
 Description: 
 
@@ -53,15 +53,18 @@ Description:
 
 from pymysql import Connection
 
-conn = Connection(host='localhost', port=3306, user='root', passwd='a1986925')
+conn = Connection(
+    host='localhost', port=3306, user='root', passwd='a1986925', autocommit=True
+)  # autocommit=True自动提交
 
 cursor = conn.cursor()  # 获取游标对象
 # 选择数据库
 conn.select_db('world')
 # 执行sql
-cursor.execute('select * from city')
+cursor.execute("insert into student values(1,'张三',21,'男')")  # 添加数据
+cursor.execute('select * from student')
 res = cursor.fetchall()
 for i in res:
     print(i)
-
+# conn.commit() 手动确认提交，不提交数据库不会作出修改，也可在构建对象时使用 autocommit=True
 conn.close()

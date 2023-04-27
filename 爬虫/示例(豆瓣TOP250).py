@@ -2,8 +2,8 @@
 Author: caiyunjin caiyunjin@vip.qq.com
 Date: 2023-04-26 17:34:55
 LastEditors: caiyunjin caiyunjin@vip.qq.com
-LastEditTime: 2023-04-26 20:09:31
-FilePath: \python\爬虫\1.requests.py
+LastEditTime: 2023-04-27 07:54:06
+FilePath: \python\爬虫\示例(豆瓣TOP250).py
 Description: 
 
 '''
@@ -16,10 +16,11 @@ head = {
 for start_num in range(0, 250, 25):
     content = requests.get(
         f'https://movie.douban.com/top250?start={start_num}', headers=head
-    ).text
-    soup = BeautifulSoup(content, 'html.parser')
+    )
+    soup = BeautifulSoup(content.text, 'html.parser')
     all_titles = soup.findAll('span', attrs={'class': 'title'})
     for title in all_titles:
         title_str = title.string
         if '/' not in title_str:
             print(title_str)
+content.close()

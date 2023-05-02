@@ -1,13 +1,24 @@
-'''
+"""
+Author: caiyunjin caiyunjin@vip.qq.com
+Date: 2023-04-28 15:49:58
+LastEditors: caiyunjin caiyunjin@vip.qq.com
+LastEditTime: 2023-05-02 10:08:36
+FilePath: \py\基本教程\第三方库与插件.py
+Description: 
+
+Copyright (c) 2023 by 蔡沄金, All Rights Reserved. 
+"""
+
+"""
 =================================第三方插件=================================
 change-case 一款快速修改当前选定内容或当前单词的命名
 Chinese (Simplified) (简体中文) Language 简体中文
 GitHub Pull requests and Issues 查看和管理GitHub拉取请求和问题
 GitHub Theme 主题
 GitLens — Git supercharged 最后一次提交的作者、时间、信息
-Google Translate 翻译
+翻译(英汉词典) 翻译
 Image preview 图片预览
-indent-rainbow 缩进更直观
+indent-rainbow 彩色缩进
 koroFileHeader 生成头部注释和函数注释
 Live Server 实时查看开发的网页或项目效果
 markdownlint 格式检查
@@ -17,10 +28,12 @@ Tabnine AI Autocomplete 智能代码补全
 vscode-icons 图标
 SQLTools 数据库管理
 SQLTools MySQL/MariaDB 数据库驱动
+Qt for Python pyside6插件
 
 ==================================第三方库==================================
 #清华源
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple 库名
+
 ------------------------------------爬虫------------------------------------
 #请求库
 requests 提供了方便的 HTTP 请求和响应处理功能，可以方便地访问 Web API 接口
@@ -67,4 +80,6 @@ python-docx 用于创建和更新Word文件
 python-pptx 用于创建和更新PPT文件
 PyPDF2 用于创建和更新PDF文件
 
-'''
+-------------------------------------打包------------------------------------
+auto-py-to-exe 图形化打包
+"""

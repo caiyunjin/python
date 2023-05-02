@@ -2,9 +2,9 @@
 Author: caiyunjin caiyunjin@vip.qq.com
 Date: 2023-04-16 14:48:29
 LastEditors: caiyunjin caiyunjin@vip.qq.com
-LastEditTime: 2023-04-30 10:17:40
-FilePath: \python\基本教程\基本.py
-Description:
+LastEditTime: 2023-05-01 16:41:22
+FilePath: \py\基本教程\基本.py
+Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 '''
 # --------------------------------------常用快捷键--------------------------------------
 """

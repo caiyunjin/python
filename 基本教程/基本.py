@@ -1,51 +1,137 @@
-'''
+"""
 Author: caiyunjin caiyunjin@vip.qq.com
 Date: 2023-04-16 14:48:29
 LastEditors: caiyunjin caiyunjin@vip.qq.com
-LastEditTime: 2023-05-01 16:41:22
+LastEditTime: 2023-05-02 21:48:14
 FilePath: \py\基本教程\基本.py
-Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-'''
-# --------------------------------------常用快捷键--------------------------------------
+Description: 
 """
-Alt + C / R / W 切换 区分大小写/正则表达式/全字
-Alt + ↑ / ↓  上下移动行
-Alt + Click 多光标和选择
-Alt + PgUp / PgDn 向上/向下滚动页面
-Alt + Shift 然后拖动鼠标 选择某个区块
-Alt + Enter 选择'查找匹配项'的所有出现项
-Ctrl + P  快速打开，转到文件
-Ctrl + Enter 行下插入
-Ctrl + ] / [  行的缩进和缩出
-Ctrl + Home / End 跳转到文件首/尾
-Ctrl + K Ctrl + C 添加行注释
-Ctrl + K Ctrl + U 删除行注释
-Ctrl + T 显示所有符号
-Ctrl + G 转到第几行
-Ctrl + P 转到某个文件
-Ctrl + F 查到
-Ctrl + H 替换
-Ctrl + D 添加所选内容以查找下一个匹配项
-Ctrl + U 撤消上次光标操作
-Ctrl + L 选择当前行
-Ctrl + F2 选择当前单词的所有匹配项
-Ctrl + +/- 放大/缩小
-Ctrl + Alt + ↑/↓ 在上方/下方插入光标（多选行）
-Ctrl + Shift + T 重新打开关闭的编辑器
-Shift + Alt  +  ↓ / ↑ 复制并粘贴到上下行
-Shift + Alt + → 展开选择
-Shift + Alt + ← 收缩选择
-Shift + Alt + 鼠标 选择鼠标区域（行列组成的矩形）
-Shift + Alt + A 切换块注释
-Shift + Alt + F 格式化文档
-Shift + PgUp/PgDn 向上/向下滚动页面
-Home / End 跳转行头行尾
 """
-# ----------------------------------------字面量----------------------------------------
-src_file = open('img/字面量.png', 'rb')
+==================================第三方插件================================
+翻译(英汉词典)                       翻译
+Black Formatter                     格式化
+change-case                         单词或变量名快速更改
+Chinese (Simplified)                简体中文
+GitHub Pull requests and Issues     查看和管理GitHub拉取请求和问题
+GitHub Theme                        主题
+GitLens — Git supercharged          最后一次提交的作者、时间、信息
+Image preview                       图片预览
+indent-rainbow                      不同颜色高亮显示缩进
+koroFileHeader                      头部注释和函数注释
+Live Preview                        同步预览
+Markdown All in One                 Markdown工具
+Markdown Preview Github Styling     Github使用的Markdown渲染样式
+markdownlint                        Markdown 格式检查工具
+Microsoft Edge Tools for VS Code    前端调试
+Prettier - Code formatter           前端代码格式化
+Qt for Python                       QT官方插件
+Regex Previewer                     正则表达式预览
+SQLTools                            数据库管理
+SQLTools MySQL/MariaDB              数据库驱动
+Tabnine AI Autocomplete             智能代码补全
+vscode-icons                        图标
+===========================================================================
 
 
-# -----------------------------------------输出-----------------------------------------
+
+==================================第三方库==================================
+#清华源
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple 库名
+
+------------------------------------爬虫------------------------------------
+#请求库
+requests 提供了方便的 HTTP 请求和响应处理功能，可以方便地访问 Web API 接口
+Selenium 提供 Web 应用程序测试的工具
+
+#解析库
+bs4 提供了 HTML 和 XML 解析相关的功能，可以方便地从网页中提取出所需的信息
+
+#存储
+pymysql MYSQL库
+
+#图像识别
+可用超级鹰识别
+
+#框架
+Scrapy 功能极其强大，但依赖库也多
+
+------------------------------------数据------------------------------------
+#数据处理
+NumPy 高性能的数值计算功能，特别是数组和矩阵，适合处理统一的数值数组数据
+Pandas 高效的数据分析和处理工具，处理各种数据格式，专门处理表格和混杂数据
+
+#数据可视化
+Matplotlib 提供了数据可视化相关的功能，可以绘制各种图表
+pyecharts 相较于Matplotlib，可以绘制更复杂图表
+
+-----------------------------------大数据-----------------------------------
+PySpark 海量数据大规模分布式计算
+
+
+-----------------------------------Web开发----------------------------------
+Django 提供了完整的 Web 开发框架，可以方便地搭建高效的 Web 应用程序
+Flask 提供了轻量级的 Web 开发框架，可以方便地搭建简单的 Web 应用程序
+
+-----------------------------------GUI开发----------------------------------
+PySide6 提供了对 Qt 库的 Python 封装，可以方便地开发图形界面应用程序
+
+-----------------------------------游戏开发---------------------------------
+Pygame 游戏、多媒体制作，入门级
+Panda3D 开源、跨平台的3D渲染和游戏开发
+
+-------------------------------------文件-----------------------------------
+python-docx 用于创建和更新Word文件
+python-pptx 用于创建和更新PPT文件
+PyPDF2 用于创建和更新PDF文件
+
+-------------------------------------打包-----------------------------------
+auto-py-to-exe 图形化打包
+===========================================================================
+
+
+
+==================================常用快捷键================================
+Alt + C / R / W         切换区分大小写/正则表达式/全字
+Alt + ↑ / ↓             上下移动行
+Alt + Click             多光标和选择
+Alt + PgUp / PgDn       向上/向下滚动页面
+Alt + Shift             然后拖动鼠标 选择某个区块
+Alt + Enter             选择'查找匹配项'的所有出现项
+Ctrl + P                快速打开，转到文件
+Ctrl + Enter            行下插入
+Ctrl + ] / [            行的缩进和缩出
+Ctrl + Home / End       跳转到文件首/尾
+Ctrl + K + 0            折叠所有（数字0）
+Ctrl + K + J            展开所有
+Ctrl + T                显示所有符号
+Ctrl + G                转到第几行
+Ctrl + P                转到某个文件
+Ctrl + F                查到
+Ctrl + H                替换
+Ctrl + D                添加所选内容以查找下一个匹配项
+Ctrl + U                撤消上次光标操作
+Ctrl + L                选择当前行
+Ctrl + F2               选择当前单词的所有匹配项
+Ctrl + +/-              放大/缩小
+Ctrl + Alt + ↑/↓        在上方/下方插入光标（多选行）
+Ctrl + Shift + T        重新打开关闭的编辑器
+Shift + Alt  +  ↓ / ↑   复制并粘贴到上下行
+Shift + Alt + 鼠标      选择鼠标区域（行列组成的矩形）
+Shift + Alt + A         切换块注释
+Shift + Alt + F         格式化文档
+Shift + PgUp/PgDn       向上/向下滚动页面
+Home / End              跳转行头行尾
+===========================================================================
+"""
+
+
+# ----------------------------------字面量----------------------------------
+src_file = open("img/字面量.png", "rb")
+
+
+# -----------------------------------输出-----------------------------------
+
+
 def 输出():
     # 输出数字
     print(1)
@@ -55,30 +141,30 @@ def 输出():
     # 输出含有运算符的表达式
     print(1 + 1)
     # 将数据输出到文件
-    fp = open('D:/text.txt', 'a + ')
-    print('hello', file=fp)
+    fp = open("D:/text.txt", "a + ")
+    print("hello", file=fp)
     fp.close()
     # 不换行输出
-    print('hello', 'file')
+    print("hello", "file")
 
 
-# -----------------------------------------变量-----------------------------------------
+# -----------------------------------变量-----------------------------------
 def 变量():
     # 变量多次赋值，最后一个赋值为准
-    name = 'caiyunjin'
-    print('标识', id(name))
-    print('类型', type(name))
-    print('值', name)
+    name = "caiyunjin"
+    print("标识", id(name))
+    print("类型", type(name))
+    print("值", name)
 
 
-# ---------------------------------------数据类型---------------------------------------
+# ---------------------------------数据类型---------------------------------
 def 数据类型():
     # 整数-int-1，十进制（默认）、二进制（0b）、八进制（0o）、十六进制（0x）
     # 可以表示 整数、负数、0
-    print('十进制', 1)
-    print('二进制', 0b10101111)
-    print('八进制', 0o175)
-    print('十六进制', 0x1EA)
+    print("十进制", 1)
+    print("二进制", 0b10101111)
+    print("八进制", 0o175)
+    print("十六进制", 0x1EA)
 
     # 浮点数-float-3.1415
     from decimal import Decimal
@@ -95,29 +181,29 @@ def 数据类型():
     print(n2 + 1)
 
     # 字符串类型
-    str1 = '哈哈'
-    str2 = '哈哈'
+    str1 = "哈哈"
+    str2 = "哈哈"
     str3 = """哈
     哈"""
-    str4 = '''哈
-    哈'''
+    str4 = """哈
+    哈"""
     print(str1)
     print(str2)
     print(str3)
     print(str4)
 
     # 类型转换 str() int() float()
-    name = '蔡佳诺'
+    name = "蔡佳诺"
     age = 6
-    print('我叫' + name + ',' + '今年' + str(age) + '岁')
+    print("我叫" + name + "," + "今年" + str(age) + "岁")
 
 
-# ----------------------------------------标识符----------------------------------------
+# ----------------------------------标识符----------------------------------
 def 标识符():
-    '''
+    """
     命名：英文 中文（不推荐） 数字（不可出现在开头） 下划线
     规则：完全区分大小写，不可使用关键字
-    '''
+    """
 
     # 关键字
     import keyword
@@ -125,7 +211,7 @@ def 标识符():
     print(keyword.kwlist)
 
 
-# ----------------------------------------运算符----------------------------------------
+# ----------------------------------运算符----------------------------------
 def 运算符():
     # 运算符优先级 算术运算 > 位运算 > 比较运算 > 布尔运算 > 赋值运算
     # 算数运算符
@@ -172,9 +258,9 @@ def 运算符():
     print(a or b)
     print(not a)  # 取反
 
-    s = 'hello world'
-    print('w' in s)
-    print('w' not in s)
+    s = "hello world"
+    print("w" in s)
+    print("w" not in s)
 
     # 位运算符
     print(4 & 8)  # 按位与，同为1为1
@@ -183,24 +269,24 @@ def 运算符():
     print(4 >> 1)  # 向右移动一位，相当于除以2
 
 
-# ----------------------------------------字符串----------------------------------------
+# ----------------------------------字符串----------------------------------
 def 字符串():
     # 转义字符
-    print('hello\nworld!')  # \n 换行
-    print('Hello\tworld!')  # \t 制表符
-    print('Helloooo\tworld!')
-    print('Helloooo\rworld!')  # \r world将hello覆盖
-    print('Helloooo\bworld!')  # \b 退一格
-    print('http:\\\\www.example.com')
+    print("hello\nworld!")  # \n 换行
+    print("Hello\tworld!")  # \t 制表符
+    print("Helloooo\tworld!")
+    print("Helloooo\rworld!")  # \r world将hello覆盖
+    print("Helloooo\bworld!")  # \b 退一格
+    print("http:\\\\www.example.com")
     print("你说 '大家好'")
-    print(r'你说 \'大家好\'')  # r 不执行转义
+    print(r"你说 \'大家好\'")  # r 不执行转义
 
     # 查询，index没有抛异常，find显示-1
-    s = 'hello world'
-    print(s.index('lo'))  # 正向查询
-    print(s.find('lo'))
-    print(s.rindex('k'))  # 逆向查询
-    print(s.rfind('k'))
+    s = "hello world"
+    print(s.index("lo"))  # 正向查询
+    print(s.find("lo"))
+    print(s.rindex("k"))  # 逆向查询
+    print(s.rfind("k"))
 
     # 大小写转换
     a = s.upper()  # 小写转大写
@@ -209,7 +295,7 @@ def 字符串():
     b = a.lower()  # 大写转小写
     print(b)
 
-    s1 = 'hEllo'
+    s1 = "hEllo"
     c = s1.swapcase()  # 大小写互换
     print(c)
 
@@ -219,9 +305,9 @@ def 字符串():
     e = d.title()  # 每个单词首字母大写，其余小写
 
     # 内容对齐
-    s2 = 'hello world'
+    s2 = "hello world"
     # 居中
-    print(s2.center(20, '*'))  # 宽度20，填充*，默认空格
+    print(s2.center(20, "*"))  # 宽度20，填充*，默认空格
     # 左对齐
     print(s2.ljust(20))
     # 右对齐
@@ -233,14 +319,14 @@ def 字符串():
     lst = s2.split()
     print(lst)
 
-    s2 = 'hello|world|python'
+    s2 = "hello|world|python"
     print(s2)
-    print(s2.split(sep='|'))
-    print(s2.split(sep='|', maxsplit=1))
+    print(s2.split(sep="|"))
+    print(s2.split(sep="|", maxsplit=1))
     # 逆向
     print(s2)
-    print(s2.rsplit(sep='|'))
-    print(s2.rsplit(sep='|', maxsplit=1))
+    print(s2.rsplit(sep="|"))
+    print(s2.rsplit(sep="|", maxsplit=1))
 
     # 判断标识符
     s.isidentifier()  # 判断是否合法标识符
@@ -251,18 +337,18 @@ def 字符串():
     s.isalnum()  # 判断是否全部由字母和数字组成
 
     # 替换
-    s = 'hello world'
-    print(s.replace('hello', 'b'))
-    s1 = 'hello hello hello world'
-    print(s1.replace('hello', 'b', 2))  # 指定替换数量
+    s = "hello world"
+    print(s.replace("hello", "b"))
+    s1 = "hello hello hello world"
+    print(s1.replace("hello", "b", 2))  # 指定替换数量
 
     # 添加
-    lst = ['hello', 'world', 'world']
-    print('|'.join(lst))
-    print(''.join(lst))
-    lst = ('hello', 'world', 'world')
-    print(''.join('lst'))
-    print('*'.join('python'))
+    lst = ["hello", "world", "world"]
+    print("|".join(lst))
+    print("".join(lst))
+    lst = ("hello", "world", "world")
+    print("".join("lst"))
+    print("*".join("python"))
 
     # 切片与列表相同
 
@@ -270,65 +356,65 @@ def 字符串():
     # % 占位符 %s->字符串 %d->整数 %f->浮点数
     # 精度控制 例如 %5d 宽度为5，不足的前面补空格。%5.2f 宽度为5（包括小数），小数为2，不足的前面补空格。.2f，可不带宽度
     # 1
-    name = '张三'
+    name = "张三"
     age = 18
-    print('我叫%s,今年%d岁' % (name, age))
+    print("我叫%s,今年%d岁" % (name, age))
 
     # 2
-    print('我叫{0},今年{1}岁'.format(name, age))
+    print("我叫{0},今年{1}岁".format(name, age))
 
     # 3
-    print(f'我叫{name},今年{age}岁')
+    print(f"我叫{name},今年{age}岁")
 
     #
-    print('%d' % 88)
-    print('%10d' % 88)  # 10 表示宽度
-    print('%.3f' % 3.14156)  # 3 表示小数点后三位
-    print('%10.3f' % 3.14156)
-    print('{0:.3}'.format(3.14156))  # 总共三位数
-    print('{0:.3f}'.format(3.14156))
-    print('{0:10.3f}'.format(3.14156))
+    print("%d" % 88)
+    print("%10d" % 88)  # 10 表示宽度
+    print("%.3f" % 3.14156)  # 3 表示小数点后三位
+    print("%10.3f" % 3.14156)
+    print("{0:.3}".format(3.14156))  # 总共三位数
+    print("{0:.3f}".format(3.14156))
+    print("{0:10.3f}".format(3.14156))
 
     # 编码
-    s = '张三'
-    print(s.encode(encoding='GBK'))  # gbk 编码中，一个中文占两个字节
-    print(s.encode(encoding='utf-8'))  # utf-8 编码中，一个中文占三个字节
+    s = "张三"
+    print(s.encode(encoding="GBK"))  # gbk 编码中，一个中文占两个字节
+    print(s.encode(encoding="utf-8"))  # utf-8 编码中，一个中文占三个字节
 
     # 解码
-    byte = s.encode(encoding='GBK')
-    print(byte.decode(encoding='GBK'))
+    byte = s.encode(encoding="GBK")
+    print(byte.decode(encoding="GBK"))
 
-    byte = s.encode(encoding='utf-8')
-    print(byte.decode(encoding='utf-8'))
+    byte = s.encode(encoding="utf-8")
+    print(byte.decode(encoding="utf-8"))
 
 
-# ----------------------------------------input----------------------------------------
+# ----------------------------------input----------------------------------
 def input():
-    a = int(input('请输入一个数字：'))
-    b = int(input('请输入另一个数字：'))
+    a = int(input("请输入一个数字："))
+    b = int(input("请输入另一个数字："))
     print(a + b)
 
 
-# -----------------------------------------判断-----------------------------------------
+# -----------------------------------判断-----------------------------------
 def 判断():
     # 第一种写法
-    a1 = int(input('数字一'))
-    a2 = int(input('数字二'))
+    a1 = int(input("数字一"))
+    a2 = int(input("数字二"))
     if a1 >= a2:
-        print(a1, '大于等于', a2)
+        print(a1, "大于等于", a2)
     else:
-        print(a1, '小于', a2)
+        print(a1, "小于", a2)
 
     # 第二种写法
-    a1 = int(input('数字一'))
-    a2 = int(input('数字二'))
-    print(str(a1) + '大于等于' + str(a2) if a1 >= a2 else str(a1) + '小于' + str(a2))
+    a1 = int(input("数字一"))
+    a2 = int(input("数字二"))
+    print(str(a1) + "大于等于" + str(a2) if a1 >= a2 else str(a1) + "小于" + str(a2))
 
     # pass，占位符
-    a1 = int(input('数字一'))
-    a2 = int(input('数字二'))
+    a1 = int(input("数字一"))
+    a2 = int(input("数字二"))
     if a1 >= a2:
-        print(a1, '大于等于', a2)
+        print(a1, "大于等于", a2)
     else:
         pass
 
@@ -351,7 +437,7 @@ def 判断():
         pass
 
 
-# -----------------------------------------循环-----------------------------------------
+# -----------------------------------循环-----------------------------------
 def 循环():
     # range
     # 第一种创建方式
@@ -418,7 +504,7 @@ def 循环():
         j = 1
         while j <= i:
             # 内层循环的print语句，不要换行，通过\t制表符进行对齐
-            print(f"{j} * {i} = {j * i}\t", end='')
+            print(f"{j} * {i} = {j * i}\t", end="")
             j += 1
         i += 1
         print()  # print空内容，就是输出一个换行
@@ -429,17 +515,17 @@ def 循环():
         # 通过内层循环控制每一行的数据
         for j in range(1, i + 1):
             # 在内层循环中输出每一行的内容
-            print(f"{j} * {i} = {j * i}\t", end='')
+            print(f"{j} * {i} = {j * i}\t", end="")
         # 外层循环可以通过print输出一个回车符
         print()
 
 
-# -----------------------------------------函数-----------------------------------------
+# -----------------------------------函数-----------------------------------
 def 函数():
-    '''
+    """
     if __name__ == '__main__':
     print()  # 只有运行本文件才会执行这条输出，被引用时不输出
-    '''
+    """
 
     # 函数内局部变量，函数外全局变量
 
@@ -513,7 +599,7 @@ def 函数():
     lst = [11, 22, 33]
     fun(*lst)  # 将列表中的每个元素都转换为位置实参
     fun(a=100, b=200, c=300)  # 关键字实参
-    dic = {'a': 111, 'b': 222, 'c': 333}
+    dic = {"a": 111, "b": 222, "c": 333}
     fun(**dic)  # 将字典中的键值对都转换为关键字实参
 
     # 递归函数，缺点：占用内存多，效率低下 优点：思路代码简单
@@ -593,6 +679,7 @@ def 函数():
         query(False)
 
     # 定义主菜单函数
+
     def main():
         print("-------------主菜单------------")
         print(f"{name}，您好，欢迎来到黑马银行ATM。请选择操作：")
@@ -621,18 +708,18 @@ def 函数():
             break  # 通过break退出循环
 
 
-# -----------------------------------------列表-----------------------------------------
+# -----------------------------------列表-----------------------------------
 def 列表():
     # 创建列表第一种方式
-    lst = ['a', '1', '2']
+    lst = ["a", "1", "2"]
 
     # 创建列表第二种方式
-    lst2 = list(['a', 'l', '2'])
+    lst2 = list(["a", "l", "2"])
 
     # 索引
-    print(lst.index('a'))
-    print(lst.index('1'))
-    print(lst.index('2'))
+    print(lst.index("a"))
+    print(lst.index("1"))
+    print(lst.index("2"))
 
     print(lst[2])
     print(lst[-3])
@@ -651,7 +738,7 @@ def 列表():
     # 元素的遍历 for in
 
     # 元素增加
-    lst.append('a')  # 添加到列表末尾
+    lst.append("a")  # 添加到列表末尾
     print(lst)
     lst.extend(lst2)  # 将另一个列表的元素添加到末尾
     print(lst)
@@ -662,8 +749,8 @@ def 列表():
     print(lst)
 
     # 元素删除
-    lst = ['a', '1', '2', '3']
-    lst.remove('2')  # 如果有重复，只删除第一个
+    lst = ["a", "1", "2", "3"]
+    lst.remove("2")  # 如果有重复，只删除第一个
     print(lst)
     lst.pop(1)  # 根据索引删除
     print(lst)
@@ -673,14 +760,14 @@ def 列表():
     del lst2  # 删除列表
 
     # 元素修改
-    lst = ['a', '1', '2', '3']
+    lst = ["a", "1", "2", "3"]
     lst[0] = 100
     print(lst)
     lst[1:3] = [4, 5, 6, 7, 8]
     print(lst)
 
     # 元素排序
-    lst = ['4', '1', '2', '3']
+    lst = ["4", "1", "2", "3"]
     lst.sort()  # 升序
     print(lst)
     lst.sort(reverse=True)  # 降序
@@ -688,7 +775,7 @@ def 列表():
     new_lst = sorted(lst)  # 产生一个新列表，不改变原列表
     print(new_lst)
 
-    lst = ['4', '1', '2', '3']
+    lst = ["4", "1", "2", "3"]
     desc_list = sorted(lst, reverse=True)  # 降序
     print(lst)
     print(desc_list)
@@ -698,34 +785,34 @@ def 列表():
     print(lst)
 
 
-# -----------------------------------------字典-----------------------------------------
+# -----------------------------------字典-----------------------------------
 def 字典():
     # 字典键不可重复，值可重复，元素是无序的
     # 使用{}创建
-    scores = {'张三': 100, '李四': 99, '王五': 98}
+    scores = {"张三": 100, "李四": 99, "王五": 98}
     print(scores)
 
     # 使用dict()创建
-    Name1 = dict(name='张六', age='20')
+    Name1 = dict(name="张六", age="20")
     print(Name1)
 
     # 获取字典的元素
-    print(scores['张三'])  # 如果不存在则报错
-    print(scores.get('张三'))  # 如果不存在则显示 None
+    print(scores["张三"])  # 如果不存在则报错
+    print(scores.get("张三"))  # 如果不存在则显示 None
 
     # 字典增加元素
-    scores['王八'] = 95
+    scores["王八"] = 95
     print(scores)
 
     # 字典删减元素
-    del scores['张三']
+    del scores["张三"]
     print(scores)
 
     # 字典清空元素
     scores.clear()
 
     # 获取所有键
-    scores = {'张三': 100, '李四': 99, '王五': 98}
+    scores = {"张三": 100, "李四": 99, "王五": 98}
     keys = scores.keys()
     print(keys)
 
@@ -742,24 +829,24 @@ def 字典():
         print(item)
 
     # 字典生成式创建
-    items = ['Fruits', 'Books', 'Others']
-    prices = ['1', '2', '3']
+    items = ["Fruits", "Books", "Others"]
+    prices = ["1", "2", "3"]
     d = {item.upper(): prices for item, prices in zip(items, prices)}
     print(d)
 
 
-# -----------------------------------------元组-----------------------------------------
+# -----------------------------------元组-----------------------------------
 def 元组():
     # ()创建
-    t = ('1', '2', '3')
-    t = '1', '2', '3'
+    t = ("1", "2", "3")
+    t = "1", "2", "3"
     print(t)
 
-    t = ('1',)  # 如果只有一个元素要加 ,
+    t = ("1",)  # 如果只有一个元素要加 ,
     print(t)
 
     # tuple()创建
-    t = tuple(('1', '2', '3'))
+    t = tuple(("1", "2", "3"))
     print(t)
 
     # 空元组创建
@@ -767,12 +854,12 @@ def 元组():
     t = tuple()
 
     # 元组的遍历
-    t = ('1', '2', '3')
+    t = ("1", "2", "3")
     for i in t:
         print(i)
 
 
-# -----------------------------------------集合-----------------------------------------
+# -----------------------------------集合-----------------------------------
 def 集合():
     # 集合是没有值的字典,无序,如果有重复元素则删除
     # {}创建
@@ -843,36 +930,36 @@ def 集合():
     print(s1.symmetric_difference(s2))
 
 
-# ---------------------------------------文件操作---------------------------------------
+# ---------------------------------文件操作---------------------------------
 def 文件操作():
-    '''
+    """
     r 以只读模式打开文件：文件的指针将放在文件的起始位置
     w 以只写模式打开文件：如果文件不存在则创建 如果存在则覆盖原内容 文件指针在文件的起始位置
     a 以追加模式打开文件：如果文件不存在则创建 文件指针在文件起始位置 如果文件存在 则在文件末尾追加内容
     b 以二进制方式打开文件：不能单独使用 需要与其它模式一起 rb或wb
     + 以读写方式打开文件：不能单独使用 需要与其它模式一起 a+
-    '''
+    """
     # with（上下文管理器），不论什么原因跳出with语句，都能确保文件正确关闭，来达到释放资源的目的
-    with open('text.txt', 'r') as f:
+    with open("text.txt", "r") as f:
         print(f.read())
 
-    file = open('text.txt', 'r')
+    file = open("text.txt", "r")
     print(file.readlines())
     file.close()
 
-    file = open('b.txt', 'w')
-    file.write('hello')
+    file = open("b.txt", "w")
+    file.write("hello")
     file.close()
 
     # 二进制文件，mp3文件，jpg图片，doc文档等
-    src_file = open('logo.png', 'rb')
-    target_file = open('copylogo.png', 'wb')
+    src_file = open("logo.png", "rb")
+    target_file = open("copylogo.png", "wb")
     target_file.write(src_file.read())
     src_file.close()
     target_file.close()
 
     # 常用方法
-    '''
+    """
     read([size]) 读取size个字节或字符的内容。若省略[size],则返回全部内容。
     readline() 读取一行内容
     readlines() 每一行都作为独立的字符串对象，并将这些对象放入列表
@@ -887,46 +974,46 @@ def 文件操作():
     tell() 返回文件指针的当前位置
     flush() 把缓冲区的内容写入文件，但不关闭文件
     close() 把缓冲区的内容写入文件，同时关闭文件
-    '''
+    """
 
 
-# -----------------------------------------异常-----------------------------------------
+# -----------------------------------异常-----------------------------------
 def 异常():
     # 捕获异常并输出
     # try except
     try:
-        a = int(input('请输入第一个数'))
-        b = int(input('请输入第二个数'))
+        a = int(input("请输入第一个数"))
+        b = int(input("请输入第二个数"))
         result = a / b
-        print('结果为：', result)
+        print("结果为：", result)
     except ZeroDivisionError:
-        print('除数不能为0')
+        print("除数不能为0")
     except ValueError:
-        print('请输入数字')
+        print("请输入数字")
 
     # try except else
     try:
-        a = int(input('请输入第一个数'))
-        b = int(input('请输入第二个数'))
+        a = int(input("请输入第一个数"))
+        b = int(input("请输入第二个数"))
         result = a / b
-        print('结果为：', result)
+        print("结果为：", result)
     except BaseException as e:
         print(e)
     else:
-        print('结果为：', result)
+        print("结果为：", result)
 
     # try except else finally
     try:
-        a = int(input('请输入第一个数'))
-        b = int(input('请输入第二个数'))
+        a = int(input("请输入第一个数"))
+        b = int(input("请输入第二个数"))
         result = a / b
-        print('结果为：', result)
+        print("结果为：", result)
     except BaseException as e:
         print(e)
     else:
-        print('结果为：', result)
+        print("结果为：", result)
     finally:  # 有无出错都执行
-        print('谢谢您的参与')
+        print("谢谢您的参与")
 
     # 打印异常
     import traceback
@@ -937,11 +1024,11 @@ def 异常():
         traceback.print_exc()
 
 
-# ------------------------------------------类------------------------------------------
+# ------------------------------------类------------------------------------
 def 类():
     class Stduent:  # 规范为类首字母为大写，也可不大写
         # 直接写在类里的变量，称为类属性
-        native_pace = '浙江'
+        native_pace = "浙江"
 
         def __init__(self, name, age):
             self.name = name  # self.name称为实体属性，进行了一个赋值操作，将局部变量的name的值赋给实体属性
@@ -955,26 +1042,26 @@ def 类():
         # 静态方法
         @staticmethod
         def sleep():  # 使用staticmethod进行修饰，所以是静态方法
-            print('睡')
+            print("睡")
 
         # 类方法
         @classmethod  # 使用classmethod进行修饰，所以是静态方法
         def run(cls):
-            print('跑')
+            print("跑")
 
     # 类之外定义的称为函数
     def drink():
-        print('喝')
+        print("喝")
 
     # 封装，提高程序的安全性
-    stu1 = Stduent('张三', 20)
-    stu2 = Stduent('王婷', 30)
+    stu1 = Stduent("张三", 20)
+    stu2 = Stduent("王婷", 30)
 
     # 下面两种写法一样
     stu1.show()  # 对象名.方法名()
     Stduent.show(stu1)  # 类名.方法名(类的对象)
     # 动态绑定，类之外绑定属性
-    stu1.gender = '男'  # 只为stu1动态绑定性别属性，stu2就不能使用
+    stu1.gender = "男"  # 只为stu1动态绑定性别属性，stu2就不能使用
 
     # 类外使用name、age
     print(stu1.name)
@@ -988,7 +1075,7 @@ def 类():
             self.age = age
 
         def info(self):
-            print(self.name, self.age, end=' ')
+            print(self.name, self.age, end=" ")
 
     class Student1(Person):
         def __init__(self, name, age, stu_no):
@@ -1008,27 +1095,27 @@ def 类():
             super().info()
             print(self.teach_no)
 
-    stu = Student1('张三', 20, '1001')
-    teacher = Teacher('李四', 30, 10)
+    stu = Student1("张三", 20, "1001")
+    teacher = Teacher("李四", 30, 10)
     stu.info()
     teacher.info()
 
     # 多态
     class Animal(object):
         def eat(self):
-            print('动物会吃')
+            print("动物会吃")
 
     class Dog(Animal):
         def eat(self):
-            print('狗吃骨头')
+            print("狗吃骨头")
 
     class Cat(Animal):
         def eat(self):
-            print('猫吃鱼')
+            print("猫吃鱼")
 
     class Person(object):
         def eat(self):
-            print('人吃饭')
+            print("人吃饭")
 
     def Fun(obj):
         obj.eat()
@@ -1072,17 +1159,17 @@ def 类():
     print(conputer3, conputer3.cpu, conputer3.disk)
 
 
-# -----------------------------------------模块-----------------------------------------
+# -----------------------------------模块-----------------------------------
 def 模块():
     # 导入模块
-    '''
+    """
     import 模块名称
     #导入模块中指定的 函数/变量/类
     from 模块名称 import 函数/变量/类
-    '''
+    """
     # 常用内容模块
 
-    '''
+    """
     sys Python解释器及其环境操作
     time 时间相关
     os 访问操作系统服务功能
@@ -1093,39 +1180,33 @@ def 模块():
     math 标准算数运算
     decimal 进行精确控制运算精度、有效数位和四舍五入操作（十进制）
     logging 记录事件、错误、警告、调试信息的日志
-    '''
+    """
 
     # 第三方模块的安装
     # pip install 模块名
 
 
-# ------------------------------------------包------------------------------------------
+# ------------------------------------包------------------------------------
 def 包():
-    '''
+    """
     python程序包含N个包 包中包含N个模块
     import 包名.模块名 as a 如果模块名比较长 方便引用可用 as 别名）
     from 可以导入包名 模块名 函数 变量 类
-    '''
+    """
 
 
-# ---------------------------------------目录操作---------------------------------------
+# ---------------------------------目录操作---------------------------------
 def 目录操作():
     # OS模块与操作系统相关
     import os
 
-    os.system('notepad.exe')  # 打开记事本
+    os.system("notepad.exe")  # 打开记事本
     # 直接调用执行文件
-    os.startfile('D:\\...\....exe')
+    os.startfile("D:\\...\....exe")
     print(os.getcwd())  # 当前文件路径
     lst = os.listdir()  # 获取当前目录下所有文件
     os.mkdir()  # 创建目录
-    os.makedirs('A/B/C')  # 创建多级目录
+    os.makedirs("A/B/C")  # 创建多级目录
     os.rmdir()  # 删除目录
-    os.removedirs('A/B/C')  # 删除多级目录
+    os.removedirs("A/B/C")  # 删除多级目录
     os.chdir()  # 设置当前工作目录
-
-
-# ------------------------------------------类------------------------------------------
-# ------------------------------------------类------------------------------------------
-# ------------------------------------------类------------------------------------------
-# ------------------------------------------类------------------------------------------

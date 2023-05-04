@@ -2,13 +2,13 @@
 演示面向对象类中的成员方法定义和使用
 """
 
-# 定义一个带有成员方法的类
+
+# 定义一个带有成员方法的类。类中的函数成为方法
 class Student:
-    name = None     # 学生的姓名
+    name = None  # 学生的姓名
 
     def say_hi(self):
         print(f"大家好呀，我是{self.name}，欢迎大家多多关照")
-
 
     def say_hi2(self, msg):
         print(f"大家好，我是：{self.name}，{msg}")

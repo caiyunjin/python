@@ -103,6 +103,8 @@ Ctrl + ] / [            行的缩进和缩出
 Ctrl + Home / End       跳转到文件首/尾
 Ctrl + K + 0            折叠所有（数字0）
 Ctrl + K + J            展开所有
+Ctrl + K Ctrl + C       添加行注释
+Ctrl + K Ctrl + U       删除行注释
 Ctrl + T                显示所有符号
 Ctrl + G                转到第几行
 Ctrl + P                转到某个文件
@@ -633,7 +635,7 @@ def 函数():
 
     test_func(compute)
 
-    # 匿名函数lambda 传参
+    # 匿名函数lambda 传参，匿名函数临时使用一次
     def test_func(compute):
         result = compute(1, 2)
 
@@ -643,6 +645,7 @@ def 函数():
         return x + y
 
     test_func(add)
+    # 结果等同上，只是不用谢add函数
     test_func(lambda x, y: x + y)
 
     # 综合案例

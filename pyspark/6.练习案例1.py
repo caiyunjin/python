@@ -5,7 +5,8 @@
 # 1. 构建执行环境入口对象
 from pyspark import SparkContext, SparkConf
 import os
-os.environ['PYSPARK_PYTHON'] = "D:/dev/python/python310/python.exe"
+
+os.environ['PYSPARK_PYTHON'] = "D:/python/python.exe"
 conf = SparkConf().setMaster("local[*]").setAppName("test_spark")
 sc = SparkContext(conf=conf)
 # 2. 读取数据文件
@@ -18,4 +19,4 @@ word_with_one_rdd = word_rdd.map(lambda word: (word, 1))
 result_rdd = word_with_one_rdd.reduceByKey(lambda a, b: a + b)
 # 6. 打印输出结果
 print(result_rdd.collect())
-
+sc.stop()

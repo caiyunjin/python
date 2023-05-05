@@ -56,3 +56,4 @@ print("需求3的结果：", result3)
 file_rdd.map(lambda x: x.split("\t")).\
     map(lambda x: {"time": x[0], "user_id": x[1], "key_word": x[2], "rank1": x[3], "rank2": x[4], "url": x[5]}).\
     saveAsTextFile("hdfs://m1:8020/output/output_json")
+sc.stop()

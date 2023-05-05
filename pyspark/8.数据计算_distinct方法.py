@@ -3,7 +3,7 @@
 """
 from pyspark import SparkConf, SparkContext
 import os
-os.environ['PYSPARK_PYTHON'] = "D:/dev/python/python310/python.exe"
+os.environ['PYSPARK_PYTHON'] = "D:/python/python.exe"
 conf = SparkConf().setMaster("local[*]").setAppName("test_spark")
 sc = SparkContext(conf=conf)
 
@@ -14,3 +14,4 @@ rdd2 = rdd.distinct()
 
 print(rdd2.collect())
 
+sc.stop()

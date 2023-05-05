@@ -8,7 +8,7 @@
 from pyspark import SparkConf, SparkContext
 import os
 import json
-os.environ['PYSPARK_PYTHON'] = 'D:/dev/python/python310/python.exe'
+os.environ['PYSPARK_PYTHON'] = 'D:/python/python.exe'
 conf = SparkConf().setMaster("local[*]").setAppName("test_spark")
 sc = SparkContext(conf=conf)
 
@@ -40,3 +40,4 @@ result3_rdd = beijing_data_rdd.map(lambda x: x['category']).distinct()
 print("需求3的结果：", result3_rdd.collect())
 # 3.3 进行商品类别去重
 
+sc.stop()

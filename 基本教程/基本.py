@@ -1,11 +1,13 @@
-"""
+'''
 Author: caiyunjin caiyunjin@vip.qq.com
 Date: 2023-04-16 14:48:29
 LastEditors: caiyunjin caiyunjin@vip.qq.com
-LastEditTime: 2023-05-02 21:48:14
+LastEditTime: 2023-05-04 18:37:21
 FilePath: \py\基本教程\基本.py
 Description: 
-"""
+
+Copyright (c) 2023 by 蔡沄金, All Rights Reserved. 
+'''
 """
 ==================================第三方插件================================
 翻译(英汉词典)                       翻译
@@ -91,7 +93,6 @@ auto-py-to-exe 图形化打包
 
 
 ==================================常用快捷键================================
-Alt + C / R / W         切换区分大小写/正则表达式/全字
 Alt + ↑ / ↓             上下移动行
 Alt + Click             多光标和选择
 Alt + PgUp / PgDn       向上/向下滚动页面
@@ -168,6 +169,7 @@ def 数据类型():
     print("八进制", 0o175)
     print("十六进制", 0x1EA)
 
+    # ----------------------------------------------------------------------
     # 浮点数-float-3.1415
     from decimal import Decimal
 
@@ -176,12 +178,14 @@ def 数据类型():
     print(n1 + n2)
     print(Decimal("1.1") + Decimal("2.2"))
 
+    # ----------------------------------------------------------------------
     # 布尔类型-True(1)-False(0)
     n1 = True
     n2 = False
     print(n1 + 1)
     print(n2 + 1)
 
+    # ----------------------------------------------------------------------
     # 字符串类型
     str1 = "哈哈"
     str2 = "哈哈"
@@ -194,6 +198,7 @@ def 数据类型():
     print(str3)
     print(str4)
 
+    # ----------------------------------------------------------------------
     # 类型转换 str() int() float()
     name = "蔡佳诺"
     age = 6
@@ -216,6 +221,7 @@ def 标识符():
 # ----------------------------------运算符----------------------------------
 def 运算符():
     # 运算符优先级 算术运算 > 位运算 > 比较运算 > 布尔运算 > 赋值运算
+    # ----------------------------------------------------------------------
     # 算数运算符
     print(1 + 1)
     print(1 - 1)
@@ -228,6 +234,7 @@ def 运算符():
     print(9 % -4)  # 余数=被除数-除数*商
     print(-9 % 4)
 
+    # ----------------------------------------------------------------------
     # 赋值运算符，从右到左
     a = b = c = 1  # 链式赋值
     a += 1  # a=a+1
@@ -237,12 +244,14 @@ def 运算符():
     a //= 1  # a=a//1 float
     a %= 1  # a=a%1 float
 
+    # ----------------------------------------------------------------------
     # 解包运算符
     a, b, c = 1, 2, 3  # 变量个数=数值个数
     print(a, b, c)
     a, b, c = b, a, c  # 交换赋值
     print(a, b, c)
 
+    # ----------------------------------------------------------------------
     # 比较运算符，结果为bool类型
     a = 1
     b = 2
@@ -253,6 +262,7 @@ def 运算符():
     print(a == b)  # ==比较值 a is b、a is not b比较标识
     print(a != b)
 
+    # ----------------------------------------------------------------------
     # 布尔运算符
     a = True
     b = False
@@ -264,6 +274,7 @@ def 运算符():
     print("w" in s)
     print("w" not in s)
 
+    # ----------------------------------------------------------------------
     # 位运算符
     print(4 & 8)  # 按位与，同为1为1
     print(4 | 8)  # 按位或，同为0为0
@@ -273,6 +284,7 @@ def 运算符():
 
 # ----------------------------------字符串----------------------------------
 def 字符串():
+    # ----------------------------------------------------------------------
     # 转义字符
     print("hello\nworld!")  # \n 换行
     print("Hello\tworld!")  # \t 制表符
@@ -283,6 +295,7 @@ def 字符串():
     print("你说 '大家好'")
     print(r"你说 \'大家好\'")  # r 不执行转义
 
+    # ----------------------------------------------------------------------
     # 查询，index没有抛异常，find显示-1
     s = "hello world"
     print(s.index("lo"))  # 正向查询
@@ -290,6 +303,7 @@ def 字符串():
     print(s.rindex("k"))  # 逆向查询
     print(s.rfind("k"))
 
+    # ----------------------------------------------------------------------
     # 大小写转换
     a = s.upper()  # 小写转大写
     print(a)
@@ -306,6 +320,7 @@ def 字符串():
 
     e = d.title()  # 每个单词首字母大写，其余小写
 
+    # ----------------------------------------------------------------------
     # 内容对齐
     s2 = "hello world"
     # 居中
@@ -317,7 +332,8 @@ def 字符串():
     # 右对齐，使用0填充
     print(s2.zfill(20))  # 只能用0填充
 
-    # 替换
+    # ----------------------------------------------------------------------
+    # 切割
     lst = s2.split()
     print(lst)
 
@@ -330,6 +346,7 @@ def 字符串():
     print(s2.rsplit(sep="|"))
     print(s2.rsplit(sep="|", maxsplit=1))
 
+    # ----------------------------------------------------------------------
     # 判断标识符
     s.isidentifier()  # 判断是否合法标识符
     s.isspace()  # 判断是否全部由空白字符组成（回车、换行、水平制表符）
@@ -338,12 +355,14 @@ def 字符串():
     s.isnumeric()  # 判断是否全部由数字组成
     s.isalnum()  # 判断是否全部由字母和数字组成
 
+    # ----------------------------------------------------------------------
     # 替换
     s = "hello world"
     print(s.replace("hello", "b"))
     s1 = "hello hello hello world"
     print(s1.replace("hello", "b", 2))  # 指定替换数量
 
+    # ----------------------------------------------------------------------
     # 添加
     lst = ["hello", "world", "world"]
     print("|".join(lst))
@@ -352,8 +371,7 @@ def 字符串():
     print("".join("lst"))
     print("*".join("python"))
 
-    # 切片与列表相同
-
+    # ----------------------------------------------------------------------
     # 格式化
     # % 占位符 %s->字符串 %d->整数 %f->浮点数
     # 精度控制 例如 %5d 宽度为5，不足的前面补空格。%5.2f 宽度为5（包括小数），小数为2，不足的前面补空格。.2f，可不带宽度
@@ -377,11 +395,13 @@ def 字符串():
     print("{0:.3f}".format(3.14156))
     print("{0:10.3f}".format(3.14156))
 
+    # ----------------------------------------------------------------------
     # 编码
     s = "张三"
     print(s.encode(encoding="GBK"))  # gbk 编码中，一个中文占两个字节
     print(s.encode(encoding="utf-8"))  # utf-8 编码中，一个中文占三个字节
 
+    # ----------------------------------------------------------------------
     # 解码
     byte = s.encode(encoding="GBK")
     print(byte.decode(encoding="GBK"))
@@ -420,6 +440,7 @@ def 判断():
     else:
         pass
 
+    # ----------------------------------------------------------------------
     # if--elif--else
     if True:
         pass
@@ -428,6 +449,7 @@ def 判断():
     else:
         pass
 
+    # ----------------------------------------------------------------------
     # 嵌套
     if True:
         pass
@@ -441,7 +463,6 @@ def 判断():
 
 # -----------------------------------循环-----------------------------------
 def 循环():
-    # range
     # 第一种创建方式
     r = range(10)  # 0-9
     print(list(r))
@@ -454,7 +475,8 @@ def 循环():
     r = range(1, 10, 2)  # 1-9 相隔2
     print(list(r))
 
-    # 循环
+    # ----------------------------------------------------------------------
+    # while循环
     a = 1
     sum = 0
     while a <= 100:
@@ -464,7 +486,8 @@ def 循环():
         a += 1
     print(sum)
 
-    # for in
+    # ----------------------------------------------------------------------
+    # for循环
     for item in "python":
         print(item)
 
@@ -484,12 +507,14 @@ def 循环():
             continue
         print(i)
 
+    # ----------------------------------------------------------------------
     # 嵌套循环
     for i in range(1, 10):
         for j in range(1, i + 1):
             print(i, "*", j, "=", i * j, end="\t")
         print()
 
+    # ----------------------------------------------------------------------
     # 二重循环
     for i in range(1, 10):
         for j in range(1, 11):
@@ -499,6 +524,7 @@ def 循环():
             print(j, end="\t")
         print()
 
+    # ----------------------------------------------------------------------
     # while 九九乘法表
     i = 1
     while i <= 9:
@@ -553,6 +579,7 @@ def 函数():
     result = calc(b=10, a=20)
     print(result)
 
+    # ----------------------------------------------------------------------
     # 不可变对象在函数体的修改不会响应实参
     def fun(num):
         odd = []
@@ -573,6 +600,7 @@ def 函数():
     fun(100)
     fun(100, 20)  # 覆盖默认
 
+    # ----------------------------------------------------------------------
     # 个数可变的位置参数，元组
     def fun(*args):
         print(args)
@@ -580,6 +608,7 @@ def 函数():
     fun(10)
     fun(10, 20)
 
+    # ----------------------------------------------------------------------
     # 个数可变的关键字参数，字典
     def fun(**kwargs):
         print(kwargs)
@@ -587,6 +616,7 @@ def 函数():
     fun(a=10)
     fun(a=10, b=20)
 
+    # ----------------------------------------------------------------------
     # 结合 位置参数在前
     def fun(*args, **kwargs):
         pass
@@ -604,26 +634,7 @@ def 函数():
     dic = {"a": 111, "b": 222, "c": 333}
     fun(**dic)  # 将字典中的键值对都转换为关键字实参
 
-    # 递归函数，缺点：占用内存多，效率低下 优点：思路代码简单
-    def fun(n):
-        if n == 1:
-            return 1
-        else:
-            return n * fun(n - 1)
-
-    print(fun(6))
-
-    # 斐波那契数列
-    def fib(n):
-        if n == 1:
-            return 1
-        elif n == 2:
-            return 1
-        else:
-            return fib(n - 1) + fib(n - 2)
-
-    print(fib(6))
-
+    # ----------------------------------------------------------------------
     # 函数作为参数传递
     def test_func(compute):
         result = compute(1, 2)  # 确定compute是函数
@@ -635,6 +646,7 @@ def 函数():
 
     test_func(compute)
 
+    # ----------------------------------------------------------------------
     # 匿名函数lambda 传参，匿名函数临时使用一次
     def test_func(compute):
         result = compute(1, 2)
@@ -648,6 +660,7 @@ def 函数():
     # 结果等同上，只是不用谢add函数
     test_func(lambda x, y: x + y)
 
+    # ----------------------------------------------------------------------
     # 综合案例
     # 定义全局变量money name
     money = 5000000
@@ -719,6 +732,7 @@ def 列表():
     # 创建列表第二种方式
     lst2 = list(["a", "l", "2"])
 
+    # ----------------------------------------------------------------------
     # 索引
     print(lst.index("a"))
     print(lst.index("1"))
@@ -727,6 +741,7 @@ def 列表():
     print(lst[2])
     print(lst[-3])
 
+    # ----------------------------------------------------------------------
     # 查询 列表名[start:stop:step]
     # 从左到右 0 开始，从右到左 -1 开始
     lst3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -737,9 +752,11 @@ def 列表():
     print(lst3[:4:1])  # 默认start为1
     print(lst3[1::1])  # 默认stop为0
 
+    # ----------------------------------------------------------------------
     # 元素的判断 in、not in
     # 元素的遍历 for in
 
+    # ----------------------------------------------------------------------
     # 元素增加
     lst.append("a")  # 添加到列表末尾
     print(lst)
@@ -751,6 +768,7 @@ def 列表():
     lst[1:] = lst3  # 切掉部分用另一个列表替换
     print(lst)
 
+    # ----------------------------------------------------------------------
     # 元素删除
     lst = ["a", "1", "2", "3"]
     lst.remove("2")  # 如果有重复，只删除第一个
@@ -762,6 +780,7 @@ def 列表():
     lst2.clear()  # 清空列表
     del lst2  # 删除列表
 
+    # ----------------------------------------------------------------------
     # 元素修改
     lst = ["a", "1", "2", "3"]
     lst[0] = 100
@@ -769,6 +788,7 @@ def 列表():
     lst[1:3] = [4, 5, 6, 7, 8]
     print(lst)
 
+    # ----------------------------------------------------------------------
     # 元素排序
     lst = ["4", "1", "2", "3"]
     lst.sort()  # 升序
@@ -783,6 +803,7 @@ def 列表():
     print(lst)
     print(desc_list)
 
+    # ----------------------------------------------------------------------
     # 列表生成式
     lst = [i for i in range(1, 10)]
     print(lst)
@@ -799,38 +820,47 @@ def 字典():
     Name1 = dict(name="张六", age="20")
     print(Name1)
 
+    # ----------------------------------------------------------------------
     # 获取字典的元素
     print(scores["张三"])  # 如果不存在则报错
     print(scores.get("张三"))  # 如果不存在则显示 None
 
+    # ----------------------------------------------------------------------
     # 字典增加元素
     scores["王八"] = 95
     print(scores)
 
+    # ----------------------------------------------------------------------
     # 字典删减元素
     del scores["张三"]
     print(scores)
 
+    # ----------------------------------------------------------------------
     # 字典清空元素
     scores.clear()
 
+    # ----------------------------------------------------------------------
     # 获取所有键
     scores = {"张三": 100, "李四": 99, "王五": 98}
     keys = scores.keys()
     print(keys)
 
+    # ----------------------------------------------------------------------
     # 获取所有值
     values = scores.values()
     print(values)
 
+    # ----------------------------------------------------------------------
     # 获取所有键值对
     items = scores.items()
     print(items)
 
+    # ----------------------------------------------------------------------
     # 字典元素的遍历
     for item in scores:
         print(item)
 
+    # ----------------------------------------------------------------------
     # 字典生成式创建
     items = ["Fruits", "Books", "Others"]
     prices = ["1", "2", "3"]
@@ -856,6 +886,7 @@ def 元组():
     t = ()
     t = tuple()
 
+    # ----------------------------------------------------------------------
     # 元组的遍历
     t = ("1", "2", "3")
     for i in t:
@@ -884,6 +915,7 @@ def 集合():
     t = set()
     print(t)
 
+    # ----------------------------------------------------------------------
     # 元素判断 in、not in
     # 元素的增加
     t.add(99)  # 增加一个
@@ -891,6 +923,7 @@ def 集合():
     t.update({54, 55})  # 增加至少一个
     print(t)
 
+    # ----------------------------------------------------------------------
     # 元素的删除
     t.remove(55)  # 一次删除一个元素，元素不存在抛出异常
     print(t)
@@ -899,6 +932,7 @@ def 集合():
     print(t)
     t.clear()  # 清空元素
 
+    # ----------------------------------------------------------------------
     # 集合间的关系 == 集合是否相等
     s1 = {1, 2, 3, 4}
     s2 = {2, 1, 3, 4}
@@ -954,6 +988,7 @@ def 文件操作():
     file.write("hello")
     file.close()
 
+    # ----------------------------------------------------------------------
     # 二进制文件，mp3文件，jpg图片，doc文档等
     src_file = open("logo.png", "rb")
     target_file = open("copylogo.png", "wb")
@@ -961,6 +996,7 @@ def 文件操作():
     src_file.close()
     target_file.close()
 
+    # ----------------------------------------------------------------------
     # 常用方法
     """
     read([size]) 读取size个字节或字符的内容。若省略[size],则返回全部内容。
@@ -1018,6 +1054,7 @@ def 异常():
     finally:  # 有无出错都执行
         print("谢谢您的参与")
 
+    # ----------------------------------------------------------------------
     # 打印异常
     import traceback
 
@@ -1029,80 +1066,209 @@ def 异常():
 
 # ------------------------------------类------------------------------------
 def 类():
-    class Stduent:  # 规范为类首字母为大写，也可不大写
-        # 直接写在类里的变量，称为类属性
-        native_pace = "浙江"
+    # 类中的函数称为方法
+    class Student:
+        name = None  # 学生的姓名
 
-        def __init__(self, name, age):
-            self.name = name  # self.name称为实体属性，进行了一个赋值操作，将局部变量的name的值赋给实体属性
-            self.__age = age  # 加两个下划线，不被类的外部使用
+        def say_hi(self):
+            print(f"大家好呀，我是{self.name}，欢迎大家多多关照")
 
-        # 在类之内称为方法
-        # 实例方法
-        def show(self):
-            print(self.name, self.__age)
+        def say_hi2(self, msg):
+            print(f"大家好，我是：{self.name}，{msg}")
 
-        # 静态方法
-        @staticmethod
-        def sleep():  # 使用staticmethod进行修饰，所以是静态方法
-            print("睡")
+    stu = Student()
+    stu.name = "周杰轮"
+    stu.say_hi2("哎哟不错哟")
 
-        # 类方法
-        @classmethod  # 使用classmethod进行修饰，所以是静态方法
-        def run(cls):
-            print("跑")
+    stu2 = Student()
+    stu2.name = "林俊节"
+    stu2.say_hi2("小伙子我看好你")
 
-    # 类之外定义的称为函数
-    def drink():
-        print("喝")
+    # ----------------------------------------------------------------------
+    # 常见内置方法
 
-    # 封装，提高程序的安全性
-    stu1 = Stduent("张三", 20)
-    stu2 = Stduent("王婷", 30)
-
-    # 下面两种写法一样
-    stu1.show()  # 对象名.方法名()
-    Stduent.show(stu1)  # 类名.方法名(类的对象)
-    # 动态绑定，类之外绑定属性
-    stu1.gender = "男"  # 只为stu1动态绑定性别属性，stu2就不能使用
-
-    # 类外使用name、age
-    print(stu1.name)
-    # print(stu1.__age) 不可被使用，因为有__
-    print(stu1._Stduent__age)  # 如果非要访问，在类的外部可通过 _Student__age访问
-
-    # 继承，提高代码的复用性
-    class Person(object):  # Person继承object类
+    class Student:
+        # __init__()，自动执行
         def __init__(self, name, age):
             self.name = name
             self.age = age
+            print("哈哈")
 
-        def info(self):
-            print(self.name, self.age, end=" ")
+        # __str__()，字符串
+        def __str__(self):
+            return f"name:{self.name}, age:{self.age}"
 
-    class Student1(Person):
-        def __init__(self, name, age, stu_no):
-            super().__init__(name, age)
-            self.stu_no = stu_no
+        # __lt__()，<
+        def __lt__(self, other):
+            return self.age < other.age
 
-        def info(self):
-            super().info()
-            print(self.stu_no)
+        # __le__()，<=
+        def __le__(self, other):
+            return self.age <= other.age
 
-    class Teacher(Person):
-        def __init__(self, name, age, teach_no):
-            super().__init__(name, age)
-            self.teach_no = teach_no
+        # __eq__()，==
+        def __eq__(self, other):
+            return self.age == other.age
 
-        def info(self):
-            super().info()
-            print(self.teach_no)
+    stu = Student("张三", 18, "18000000000")
+    print(stu.name)
+    print(stu.age)
+    print(stu.tel)
 
-    stu = Student1("张三", 20, "1001")
-    teacher = Teacher("李四", 30, 10)
-    stu.info()
-    teacher.info()
+    stu1 = Student("张三", 10)
+    stu2 = Student("李四", 20)
+    print(stu)
+    print(stu1 < stu2)
+    print(stu1 <= stu2)
+    print(stu1 == stu2)
 
+    # ----------------------------------------------------------------------
+    # 封装
+    # 定义一个类，内含私有变量或私有方法，例：__变量名，__方法()
+    class Phone:
+        __current_voltage = 0.5  # 当前手机运行电压
+
+        def __keep_single_core(self):
+            print("让CPU以单核模式运行")
+
+        def call_by_5g(self):
+            if self.__current_voltage >= 1:
+                print("5g通话已开启")
+            else:
+                self.__keep_single_core()
+                print("电量不足，无法使用5g通话，并已设置为单核运行进行省电。")
+
+    phone = Phone()
+    phone.call_by_5g()
+
+    # ----------------------------------------------------------------------
+    # 继承
+    # 演示单继承
+    class Phone:
+        IMEI = None  # 序列号
+        producer = "ITCAST"  # 厂商
+
+        def call_by_4g(self):
+            print("4g通话")
+
+    class Phone2022(Phone):  # Phone 继承上面的类
+        face_id = "10001"  # 面部识别ID
+
+        def call_by_5g(self):
+            print("2022年新功能：5g通话")
+
+    phone = Phone2022()
+    print(phone.producer)
+    phone.call_by_4g()
+    phone.call_by_5g()
+
+    # 演示多继承
+    class NFCReader:
+        nfc_type = "第五代"
+        producer = "HM"
+
+        def read_card(self):
+            print("NFC读卡")
+
+        def write_card(self):
+            print("NFC写卡")
+
+    class RemoteControl:
+        rc_type = "红外遥控"
+
+        def control(self):
+            print("红外遥控开启了")
+
+    class MyPhone(Phone, NFCReader, RemoteControl):
+        pass
+
+    phone = MyPhone()
+    phone.call_by_4g()
+    phone.read_card()
+    phone.write_card()
+    phone.control()
+
+    print(phone.producer)
+
+    # ----------------------------------------------------------------------
+    # 复写父类
+    class Phone:
+        IMEI = None  # 序列号
+        producer = "ITCAST"  # 厂商
+
+        def call_by_5g(self):
+            print("使用5g网络进行通话")
+
+    # 定义子类，复写父类成员
+    class MyPhone(Phone):
+        producer = "ITHEIMA"  # 复写父类的成员属性
+
+        def call_by_5g(self):
+            print("开启CPU单核模式，确保通话的时候省电")
+            # 方式1
+            # print(f"父类的厂商是：{Phone.producer}")
+            # Phone.call_by_5g(self)
+            # 方式2
+            print(f"父类的厂商是：{super().producer}")
+            super().call_by_5g()
+            print("关闭CPU单核模式，确保性能")
+
+    phone = MyPhone()
+    phone.call_by_5g()
+    print(phone.producer)
+
+    # ----------------------------------------------------------------------
+    # 变量注解
+    # 基础数据类型注解
+    import json
+    import random
+
+    # 类对象类型注解
+    class Student:
+        pass
+
+    stu: Student = Student()
+
+    # 基础容器类型注解
+    # 容器类型详细注解
+    my_list: list[int] = [1, 2, 3]
+    my_tuple: tuple[int, str, bool] = (1, "itheima", True)
+    my_dict: dict[str, int] = {"itheima": 666}
+    # 在注释中进行类型注解
+    var_1 = random.randint(1, 10)  # type: int
+    var_2 = json.loads('{"name": "zhangsan"}')  # type: dict[str, str]
+
+    def func():
+        return 10
+
+    var_3 = func()  # type: int
+    # 类型注解的限制
+    var_4: int = "itheima"
+    var_5: str = 123
+
+    # ----------------------------------------------------------------------
+    # 函数和方法注解
+    # 对形参进行类型注解
+    def add(x: int, y: int):
+        return x + y
+
+    # 对返回值进行类型注解
+    def func(data: list) -> list:
+        return data
+
+    print(func(1))
+
+    # ----------------------------------------------------------------------
+    # Union联合注解
+    # 使用Union类型，必须先导包
+    from typing import Union
+
+    my_list: list[Union[int, str]] = [1, 2, "itheima", "itcast"]
+
+    def func(data: Union[int, str]) -> Union[int, str]:
+        pass
+
+    # ----------------------------------------------------------------------
     # 多态
     class Animal(object):
         def eat(self):
@@ -1130,6 +1296,7 @@ def 类():
     # 特殊方法和属性
     print(dir(object))
 
+    # ----------------------------------------------------------------------
     # 类的浅拷贝和深拷贝
     class Cpu:
         pass
@@ -1213,3 +1380,264 @@ def 目录操作():
     os.rmdir()  # 删除目录
     os.removedirs("A/B/C")  # 删除多级目录
     os.chdir()  # 设置当前工作目录
+
+
+# -----------------------------------闭包-----------------------------------
+def 闭包():
+    # 无需定义全局变量即可实现通过函数，持续的访问、修改某个值
+    def account_create(initial_amount=0):
+        def atm(num, deposit=True):
+            nonlocal initial_amount
+            if deposit:
+                initial_amount += num
+                print(f"存款：+{num}， 账户余额：{initial_amount}")
+            else:
+                initial_amount -= num
+                print(f"取款：-{num}， 账户余额：{initial_amount}")
+
+        return atm
+
+    atm = account_create()
+
+    atm(100)
+    atm(200)
+    atm(100, deposit=False)
+
+
+# ----------------------------------装饰器----------------------------------
+def 装饰器():
+    # 装饰器的一般写法（闭包）
+    def outer(func):
+        def inner():
+            print("我睡觉了")
+            func()
+            print("我起床了")
+
+        return inner
+
+    def sleep():
+        import random
+        import time
+
+        print("睡眠中......")
+        time.sleep(random.randint(1, 5))
+
+    fn = outer(sleep)
+    fn()
+
+    # 装饰器的快捷写法
+    def outer(func):
+        def inner():
+            print("我睡觉了")
+            func()
+            print("我起床了")
+
+        return inner
+
+    @outer
+    def sleep():
+        import random
+        import time
+
+        print("睡眠中......")
+        time.sleep(random.randint(1, 5))
+
+    sleep()
+
+
+# ---------------------------------工厂模式---------------------------------
+def 工厂模式():
+    class Person:
+        pass
+
+    class Worker(Person):
+        pass
+
+    class Student(Person):
+        pass
+
+    class Teacher(Person):
+        pass
+
+    class PersonFactory:
+        def get_person(self, p_type):
+            if p_type == 'w':
+                return Worker()
+            elif p_type == 's':
+                return Student()
+            else:
+                return Teacher()
+
+    pf = PersonFactory()
+    worker = pf.get_person('w')
+    stu = pf.get_person('s')
+    teacher = pf.get_person('t')
+
+
+# ----------------------------------多线程----------------------------------
+def 多线程():
+    import time
+    import threading
+
+    def sing(msg):
+        while True:
+            print(msg)
+            time.sleep(1)
+
+    def dance(msg):
+        while True:
+            print(msg)
+            time.sleep(1)
+
+    if __name__ == '__main__':
+        # 创建一个唱歌的线程
+        sing_thread = threading.Thread(target=sing, args=("我要唱歌 哈哈哈",))
+        # 创建一个跳舞的线程
+        dance_thread = threading.Thread(target=dance, kwargs={"msg": "我在跳舞哦 啦啦啦"})
+
+        # 让线程去干活吧
+        sing_thread.start()
+        dance_thread.start()
+
+
+# ----------------------------------socket----------------------------------
+def socket():
+    # 服务端
+    import socket
+
+    # 创建Socket对象
+    socket_server = socket.socket()
+    # 绑定ip地址和端口
+    socket_server.bind(("localhost", 8888))
+    # 监听端口
+    socket_server.listen(1)
+    # listen方法内接受一个整数传参数，表示接受的链接数量
+    # 等待客户端链接
+    # result: tuple = socket_server.accept()
+    # conn = result[0]        # 客户端和服务端的链接对象
+    # address = result[1]     # 客户端的地址信息
+    conn, address = socket_server.accept()
+    # accept方法返回的是二元元组(链接对象， 客户端地址信息)
+    # 可以通过 变量1, 变量2 = socket_server.accept()的形式，直接接受二元元组内的两个元素
+    # accept()方法，是阻塞的方法，等待客户端的链接，如果没有链接，就卡在这一行不向下执行了
+
+    print(f"接收到了客户端的链接，客户端的信息是：{address}")
+
+    while True:
+        # 接受客户端信息，要使用客户端和服务端的本次链接对象，而非socket_server对象
+        data: str = conn.recv(1024).decode("UTF-8")
+        # recv接受的参数是缓冲区大小，一般给1024即可
+        # recv方法的返回值是一个字节数组也就是bytes对象，不是字符串，可以通过decode方法通过UTF-8编码，将字节数组转换为字符串对象
+        print(f"客户端发来的消息是：{data}")
+        # 发送回复消息
+        msg = input("请输入你要和客户端回复的消息：")
+        if msg == 'exit':
+            break
+        conn.send(msg.encode("UTF-8"))
+    # 关闭链接
+    conn.close()
+    socket_server.close()
+
+    # ----------------------------------------------------------------------
+    # 客户端
+    import socket
+
+    # 创建socket对象
+    socket_client = socket.socket()
+    # 连接到服务端
+    socket_client.connect(("localhost", 8888))
+
+    while True:
+        # 发送消息
+        msg = input("请输入要给服务端发送的消息：")
+        if msg == 'exit':
+            break
+        socket_client.send(msg.encode("UTF-8"))
+        # 接收返回消息
+        recv_data = socket_client.recv(1024)  # 1024是缓冲区的大小，一般1024即可。 同样recv方法是阻塞的
+        print(f"服务端回复的消息是：{recv_data.decode('UTF-8')}")
+    # 关闭链接
+    socket_client.close()
+
+
+# --------------------------------正则表达式---------------------------------
+def 正则表达式():
+    import re
+
+    s = "1python itheima python python"
+    # match 从头匹配
+    result = re.match("python", s)
+    print(result)
+
+    # search 搜索匹配
+    result = re.search("python2", s)
+    print(result)
+
+    # findall 搜索全部匹配
+    result = re.findall("python", s)
+    print(result)
+
+    import re
+
+    # ----------------------------------------------------------------------
+    s = "itheima1 @@python2 !!666 ##itccast3"
+
+    result = re.findall(r'[b-eF-Z3-9]', s)  # 字符串前面带上r的标记，表示字符串中转义字符无效，就是普通字符的意思
+    print(result)
+
+    # 匹配账号，只能由字母和数字组成，长度限制6到10位
+    r = '^[0-9a-zA-Z]{6,10}$'
+    s = '123456_'
+    print(re.findall(r, s))
+
+    # 匹配QQ号，要求纯数字，长度5-11，第一位不为0
+    r = '^[1-9][0-9]{4,10}$'
+    s = '123453678'
+    print(re.findall(r, s))
+
+    # 匹配邮箱地址，只允许qq、163、gmail这三种邮箱地址
+    # {内容}.{内容}.{内容}.{内容}.{内容}.{内容}.{内容}.{内容}@{内容}.{内容}.{内容}
+    r = r'(^[\w-]+(\.[\w-]+)*@(qq|163|gmail)(\.[\w-]+)+$)'
+    # s = 'a.b.c.d.e.f.g@qq.com.a.z.c.d.e'
+    s = 'a.b.c.d.e.f.g@126.com.a.z.c.d.e'
+    print(re.match(r, s))
+
+
+# -----------------------------------递归------------------------------------
+def 递归():
+    # 写一个函数，列出文件夹内的全部内容，如果是文件就收集到list,如果是文件夹，就递归调用自己，再次判断。
+    import os
+
+    def test_os():
+        """演示os模块的3个基础方法"""
+        print(os.listdir("D:/test"))  # 列出路径下的内容
+        # print(os.path.isdir("D:/test/a"))   # 判断指定路径是不是文件夹
+        # print(os.path.exists("D:/test"))    # 判断指定路径是否存在
+
+    def get_files_recursion_from_dir(path):
+        """
+        从指定的文件夹中使用递归的方式，获取全部的文件列表
+        :param path: 被判断的文件夹
+        :return: list，包含全部的文件，如果目录不存在或者无文件就返回一个空list
+        """
+        print(f"当前判断的文件夹是：{path}")
+        file_list = []
+        if os.path.exists(path):
+            for f in os.listdir(path):
+                new_path = path + "/" + f
+                if os.path.isdir(new_path):
+                    # 进入到这里，表明这个目录是文件夹不是文件
+                    file_list += get_files_recursion_from_dir(new_path)
+                else:
+                    file_list.append(new_path)
+        else:
+            print(f"指定的目录{path}，不存在")
+            return []
+
+        return file_list
+
+    if __name__ == '__main__':
+        print(get_files_recursion_from_dir("D:/test"))
+
+    def a():
+        a()

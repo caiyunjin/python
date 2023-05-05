@@ -5,7 +5,7 @@
 from pyspark import SparkConf, SparkContext
 import os
 import json
-os.environ['PYSPARK_PYTHON'] = 'D:/dev/python/python310/python.exe'
+os.environ['PYSPARK_PYTHON'] = 'D:/python/python.exe'
 os.environ['HADOOP_HOME'] = "D:/dev/hadoop-3.0.0"
 conf = SparkConf().setMaster("local[*]").setAppName("test_spark")
 conf.set("spark.default.parallelism", "1")
@@ -57,3 +57,4 @@ print("需求3的结果：", result3)
 file_rdd.map(lambda x: x.split("\t")).\
     map(lambda x: {"time": x[0], "user_id": x[1], "key_word": x[2], "rank1": x[3], "rank2": x[4], "url": x[5]}).\
     saveAsTextFile("D:/output_json")
+sc.stop()

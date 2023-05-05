@@ -1,20 +1,20 @@
 {
-  "sqltools.connections": [
-    {
-      "mysqlOptions": {
-        "authProtocol": "default"
-      },
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 3306,
-      "driver": "MySQL",
-      "name": "caiyunjin",
-      "database": "world",
-      "username": "root"
-    }
-  ],
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-  "python.formatting.provider": "none"
+	"sqltools.connections": [
+		{
+			"mysqlOptions": {
+				"authProtocol": "default"
+			},
+			"previewLimit": 50,
+			"server": "localhost",
+			"port": 3306,
+			"driver": "MySQL",
+			"name": "caiyunjin",
+			"database": "world",
+			"username": "root"
+		}
+	],
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.python"
+	},
+	"python.formatting.provider": "none"
 }

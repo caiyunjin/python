@@ -2,7 +2,7 @@
 Author: caiyunjin caiyunjin@vip.qq.com
 Date: 2023-04-16 14:48:29
 LastEditors: caiyunjin caiyunjin@vip.qq.com
-LastEditTime: 2023-05-05 12:44:07
+LastEditTime: 2023-05-07 11:40:46
 FilePath: \py\基本教程\基本.py
 Description: 
 
@@ -154,7 +154,7 @@ def 输出():
 # -----------------------------------变量-----------------------------------
 def 变量():
     # 变量多次赋值，最后一个赋值为准
-    name = "caiyunjin"
+    name = "张三"
     print("标识", id(name))
     print("类型", type(name))
     print("值", name)
@@ -284,7 +284,6 @@ def 运算符():
 
 # ----------------------------------字符串----------------------------------
 def 字符串():
-    # ----------------------------------------------------------------------
     # 转义字符
     print("hello\nworld!")  # \n 换行
     print("Hello\tworld!")  # \t 制表符

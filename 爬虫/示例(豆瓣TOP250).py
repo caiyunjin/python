@@ -2,8 +2,8 @@
 Author: caiyunjin caiyunjin@vip.qq.com
 Date: 2023-04-26 17:34:55
 LastEditors: caiyunjin caiyunjin@vip.qq.com
-LastEditTime: 2023-04-27 07:54:06
-FilePath: \python\爬虫\示例(豆瓣TOP250).py
+LastEditTime: 2023-05-06 08:06:32
+FilePath: \py\爬虫\示例(豆瓣TOP250).py
 Description: 
 
 '''

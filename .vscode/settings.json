@@ -10,11 +10,12 @@
 			"driver": "MySQL",
 			"name": "caiyunjin",
 			"database": "world",
-			"username": "root"
+			"username": "root",
+			"askForPassword": true
 		}
 	],
 	"[python]": {
-		"editor.defaultFormatter": "ms-python.python"
+		"editor.defaultFormatter": "ms-python.black-formatter"
 	},
 	"python.formatting.provider": "none"
 }

@@ -2,7 +2,7 @@
 Author: caiyunjin caiyunjin@vip.qq.com
 Date: 2023-04-16 14:48:29
 LastEditors: caiyunjin caiyunjin@vip.qq.com
-LastEditTime: 2023-05-04 18:37:21
+LastEditTime: 2023-05-05 12:44:07
 FilePath: \py\基本教程\基本.py
 Description: 
 
@@ -1641,3 +1641,62 @@ def 递归():
 
     def a():
         a()
+
+
+# -----------------------------------MySql-----------------------------------
+def MySql():
+    # Sql大小写不敏感，命令后以 ; 结尾
+    # Sql注释 -- 注释内容、# 注释内容、/* 注释内容 */
+    # show database; 查看数据库
+    # use 数据库名; 使用数据库
+    # create database 数据库名 [charset utf8]; 创建数据库，[]表示可选
+    # drop database 数据库名; 删除数据库
+    # select database(); 查看当前使用的数据库
+
+    # show tables;查看表
+    # drop table; 删除表
+    # create table 表名(
+    #                 列名 列类型(int、float、varchar(长度)、date、timestamp（时间戳）),
+    #                 列名 列类型
+    #                 ...
+    #                 )
+
+    # 插入数据
+    # insert into 表(列) values(数据),(数据),...; 单列插入数据
+    # insert into 表(列,列,...) values(数据,数据,...),values(数据,数据,...)...; 多列插入数据
+
+    # 删除数据
+    # delete from 表名 [where 条件判断]；条件判断：列 操作符（= >等） 值
+
+    # 更新数据
+    # update 表名 set 列=值 [where 条件判断]；
+
+    # 查询数据
+    # select 列,列,...|* from 表 [where 条件判断] [limit n[,m]（单独n，去n条数据、n,m，跳过n条取m条）]；* 代表所有
+
+    # 分组聚合
+    # select 列,聚合函数,聚合函数... from 表 [where 条件] group by 列；
+    # 聚合函数有：sum(列)求和、avg(列)求平均值、min(列)求最小值、max(列)求最大值、count(列|*)求数量
+
+    # 排序分页
+    ##select 列,聚合函数,聚合函数... from 表 [where 条件] group by 列 order by 列 [asc（小到大）|desc（大到小）] [limit n[,m]（单独n，去n条数据、n,m，跳过n条取m条）]；
+
+    # ----------------------------------------------------------------------
+    # 连接数据库
+    from pymysql import Connection
+
+    conn = Connection(
+        host="localhost",  # 主机名（IP）
+        port=3306,  # 端口
+        user="root",  # 账户
+        password="123456",  # 密码
+        autocommit=True,  # 设置自动提交
+    )
+    # 获取到游标对象
+    cursor = conn.cursor()
+    # 选择数据库
+    conn.select_db("world")
+    # 执行sql
+    cursor.execute("insert into student values(10001, '张三', 10, '男')")
+    # 关闭链接
+    conn.close()
